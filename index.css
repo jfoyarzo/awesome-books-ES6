@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  padding: 1em;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 0.5em 1em;
+  border: 2px solid black;
+}
+
+nav > a {
+  text-decoration: none;
+  color: black;
+  padding: 0.5em 1em;
+}
+
+nav > a:nth-child(2) {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#books {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 11em);
+}
+
+#form,
+#contact {
+  margin-top: 2em;
+  height: calc(100vh - 13em);
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 1em 0 1em 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.book-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6em;
+  align-items: center;
+  background-color: #d3d3d338;
+}
+
+.all-books {
+  width: 70%;
+  padding: 1em 0.5em;
+  margin-bottom: 4em;
+  border: black solid 2px;
+  border-radius: 10px;
+  overflow-y: auto;
+}
+
+.book-div:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.book-div:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.book-div:nth-child(odd) {
+  background-color: rgb(211, 211, 211, 0.8);
+}
+
+.new-book {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+input {
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+input:focus {
+  border-radius: 10px;
+}
+
+.add {
+  align-self: flex-end;
+  padding: 0.5em 3em;
+}
+
+.remove {
+  padding: 0.5em 2em;
+}
+
+#contact p,
+#contact ul {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  padding: 1em;
+  border: 2px solid black;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.active {
+  text-decoration: underline;
+  color: chocolate;
+  font-weight: bold;
+}
+
+.date {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0.5em;
+}
+
+.successMsg {
+  color: chocolate;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  transition: all 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.transparent {
+  opacity: 0;
+}
