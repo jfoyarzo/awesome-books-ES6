@@ -1,3 +1,4 @@
+import { DateTime } from './luxon.js';
 import Methods from './Methods.js';
 import Book from './Book.js';
 
@@ -19,7 +20,7 @@ const addBook = () => {
 const displayDate = () => {
   const dateEl = document.querySelector('.date');
   setInterval(() => {
-    const date = new Date().toUTCString();
+    const date = DateTime.now().toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
     dateEl.innerHTML = date;
   }, 1000);
 };
