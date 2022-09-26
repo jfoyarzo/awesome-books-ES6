@@ -19,7 +19,7 @@ This is a code refactor to ES6 from the ['Awesome Books'](https://github.com/Kan
 
 To get a local copy, run the fllowing command.
 
-- `git clone git@github.com:KanzaTahreem/Awesome-Books.git`
+- `git clone git@github.com:jfoyarzo/awesome-books-ES6.git`
 
 ### Prerequisites
 
