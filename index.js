@@ -1,41 +1,13 @@
 /* eslint-disable max-classes-per-file */
-import Book from './modules/Book.js';
-import Methods from './modules/Methods.js';
+import { addBook, displayDate, checkStorage } from './modules/Functions.js';
 
 window.onload = () => {
   const add = document.querySelector('.add');
-  const dateEl = document.querySelector('.date');
-
-  const displayDate = () => {
-    setInterval(() => {
-      const date = new Date().toUTCString();
-      dateEl.innerHTML = date;
-    }, 1000);
-  };
+  checkStorage();
   displayDate();
-
-  const method = new Methods();
-  const bookStorage = localStorage.getItem('bookArray');
-  const success = document.querySelector('.successMsg');
-
-  if (bookStorage) {
-    method.bookList = JSON.parse(bookStorage);
-    method.showBooks();
-  }
-
   add.addEventListener('click', (e) => {
     e.preventDefault();
-
-    const title = document.querySelector('.title').value;
-    const author = document.querySelector('.author').value;
-    const book = new Book(title, author);
-    method.bookList.push(book);
-    method.showBooks();
-    document.querySelector('.title').value = '';
-    document.querySelector('.author').value = '';
-    localStorage.setItem('bookArray', JSON.stringify(method.bookList));
-    success.classList.remove('transparent');
-    setTimeout(() => success.classList.add('transparent'), 3000);
+    addBook();
   });
 };
 
