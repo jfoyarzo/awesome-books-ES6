@@ -13,7 +13,7 @@ This is a code refactor to ES6 from the ['Awesome Books'](https://github.com/Kan
 
 ## Live Demo
 
-[Live Demo Link](https://kanzatahreem.github.io/Awesome-Books/)
+[Live Demo Link](https://jfoyarzo.github.io/awesome-books-ES6/)
 
 ## Getting Started
 
